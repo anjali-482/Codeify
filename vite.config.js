@@ -5,15 +5,14 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    chunkSizeWarningLimit: 1500 // (optional: increase chunk warning limit)
+    chunkSizeWarningLimit: 1500
   },
   preview: {
-    port: process.env.PORT || 4173, // 👈 important for Render
-    host: true,                      // 👈 important for Render (listen on 0.0.0.0)
-    allowedHosts: ['codeify-7bqk.onrender.com'],
+    port: parseInt(process.env.PORT) || 4173, // ⬅️ Ensures PORT is read as number
+    host: '0.0.0.0',                          // ⬅️ Listen on all interfaces for Render
   },
   server: {
-    port: 3000,  // when you run locally using `npm run dev`
-    host: true
+    port: 3000,
+    host: '0.0.0.0'  // ⬅️ Listen on all interfaces for dev (optional but consistent)
   }
 })
