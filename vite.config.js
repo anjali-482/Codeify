@@ -9,7 +9,7 @@ export default defineConfig({
   },
   preview: {
     port: process.env.PORT || 4173, // 👈 important for Render
-    host: true                      // 👈 important for Render (listen on 0.0.0.0)
+    host: true,                      // 👈 important for Render (listen on 0.0.0.0)
     allowedHosts: ['codeify-7bqk.onrender.com'],
   },
   server: {
