@@ -8,11 +8,12 @@ export default defineConfig({
     chunkSizeWarningLimit: 1500
   },
   preview: {
-    port: parseInt(process.env.PORT) || 4173, // ⬅️ Ensures PORT is read as number
-    host: '0.0.0.0',                          // ⬅️ Listen on all interfaces for Render
+    port: process.env.PORT || 4173,
+    host: true,
+    allowedHosts: ['codeify-7bqk.onrender.com'], 
   },
   server: {
     port: 3000,
-    host: '0.0.0.0'  // ⬅️ Listen on all interfaces for dev (optional but consistent)
+    host: true
   }
 })
