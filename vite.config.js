@@ -10,6 +10,7 @@ export default defineConfig({
   preview: {
     port: process.env.PORT || 4173, // 👈 important for Render
     host: true                      // 👈 important for Render (listen on 0.0.0.0)
+    allowedHosts: ['codeify-7bqk.onrender.com'],
   },
   server: {
     port: 3000,  // when you run locally using `npm run dev`
