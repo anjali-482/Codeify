@@ -65,7 +65,7 @@ const App = () => {
     setResponse("")
     setLoading(true);
     const res = await ai.models.generateContent({
-      model: "gemini-2.0-flash",
+      model: "gemini-2.5-flash",
       contents: `You are an expert-level software developer, skilled in writing efficient, clean, and advanced code.
 I’m sharing a piece of code written in ${selectedOption.value}.
 Your job is to deeply review this code and provide:
@@ -91,7 +91,7 @@ ${code}
     setResponse("")
     setLoading(true);
     const res = await ai.models.generateContent({
-      model: "gemini-2.0-flash",
+      model: "gemini-2.5-flash",
       contents: `You are an expert programmer.
 Please FIX the following ${selectedOption.value} code.
 Only output the corrected version without any extra explanation:
